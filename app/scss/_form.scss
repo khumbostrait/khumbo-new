@@ -1,0 +1,29 @@
+.form {
+  margin-top: 4rem;
+  input {
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px black;
+  }
+  form {
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  textarea {
+    resize: none;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px black;
+    margin-top: 20px;
+  }
+
+  button {
+    border: 2px solid white;
+    box-shadow: 0 0 5px black;
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -1,4 +1,5 @@
 .about {
+  margin-bottom: 3rem;
   text-align: center;
   background-color: white;
   h2 {
@@ -6,13 +7,11 @@
     position: relative;
   }
   .para {
+    color: black;
+    box-shadow: 0 0 5px transparent;
+    padding: 4px;
     @include breakpoints-down(small) {
       padding: 0 10px;
     }
   }
-}
-
-.main {
-  position: relative;
-  bottom: 150px;
 }

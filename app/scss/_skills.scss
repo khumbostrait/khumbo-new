@@ -1,16 +1,24 @@
 .skills {
+  margin-bottom: 3rem;
+
   h2 {
     text-align: center;
   }
   .skill {
     text-align: center;
+    h3 {
+      font-size: 14px;
+    }
     img {
       max-width: 100%;
-      padding: 3px 10px;
+      transition: 300ms ease-in-out;
       background-color: white;
       box-shadow: 0 0 5px black;
       @include breakpoints-up(large) {
         padding: 5px 40px;
+      }
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }

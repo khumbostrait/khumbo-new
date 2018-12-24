@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: var(#7250d5);
+  
   font-size: 100%;
 }
 
@@ -15,7 +16,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #efefef;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -68,4 +68,8 @@ button {
   @include breakpoints-up(large) {
     display: none;
   }
+}
+
+.main {
+  position: relative;
 }

@@ -1,33 +1,95 @@
 .introl {
-  @include breakpoints-up(large) {
-    padding-top: 10px;
-  }
-  &__tittle {
-    color: white;
+  
+  position: relative;
+  bottom: 0.625rem;
 
+  // change padding for large screens
+  @include breakpoints-up(large) {
+    padding-top: 0.625rem;
+  }
+  // main tittle of the page
+  &__tittle {
+
+    @include breakpoints-down(medium){
+      &::before{
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        border-radius: 100%;
+        content: "";
+        transform: rotate(-10deg);
+        background-color: white;
+        bottom: 0;
+      }
+    }
+
+    @include breakpoints-up(medium) {
+      // increase the border radius for lager screen
+      border-bottom-right-radius: 6.25rem;
+      border-bottom-left-radius: 6.25rem;
+      padding: 1.25rem 0 9.8125rem;
+      &::before{
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        content: "";
+        transform: rotate(65deg);
+        background-color: white;
+        bottom: 0;
+      }
+      &::after{
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        content: "";
+        transform: rotate(80deg);
+        background-color: white;
+        bottom: 0;
+      }
+    }
+
+    // second lines 
+
+    // nomal flow
     text-align: center;
+    // border-bottom-right-radius: 50px;
+    // border-bottom-left-radius: 50px;
     color: white;
     text-transform: capitalize;
-    padding: 20px 0 157px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 50px;
     background: -webkit-linear-gradient(
       left,
       #7250d5,
       #aa47a5 50%,
       #f43a67 99%
     );
-
-    position: relative;
-    overflow: hidden;
+ 
   }
+
+  // intro image of the user
   &__image {
     position: relative;
-    bottom: 157px;
+    
+    // chabge the distance of padding for lager screens
+    @include breakpoints-up(medium) {
+      position: relative;
+      bottom: 9.8125rem;
+    }
+    // nomal flow
+    position: relative;
+    bottom: 50px;
     opacity: 0.99;
     text-align: center;
 
     img {
+      // nomal flow
+      max-width: 90%;
+      padding: 3px;
+      border: 2px solid white;
+
+      // break points
       @include breakpoints-up(small) {
         width: 100%;
         border: 3px solid white;
@@ -38,25 +100,39 @@
       @include breakpoints-up(large) {
         width: 90%;
       }
-
-      max-width: 90%;
-
-      padding: 3px;
-      border: 2px solid white;
     }
   }
+
+  // hello and name message
   &__description {
+
+
+    
     text-align: center;
     position: relative;
-    bottom: 157px;
+    padding-bottom: 20px;
+    bottom: 60px;
+
+    // increase the font size for lager screens
+    @include breakpoints-up(medium) {
+      font-size: 30px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
     .name {
       font-size: 1.1rem;
+      @include breakpoints-up(medium) {
+        font-size: 30px;
+        font-weight: bold;
+      }
     }
   }
 }
 
 .accounts {
   position: fixed;
+  z-index: 1;
   left: 0;
   top: 60%;
   .link {
@@ -70,15 +146,8 @@
       background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
       &:hover {
         padding: 20px 3em;
-        border: 2px solid blue;
+        border-radius:50px ;
       }
     }
   }
-}
-
-// accordation
-.accordation {
-  background-color: #dddddd;
-  padding: 20px;
-  margin-bottom: 20px;
 }

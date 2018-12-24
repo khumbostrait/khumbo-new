@@ -1,8 +1,10 @@
 .nav {
+  padding: 8px 20px;
+
   &__logo {
     font-weight: bold;
     color: rgb(84, 14, 224);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -67,13 +69,11 @@
 .overla {
   visibility: hidden;
   width: 1%;
-  margin: auto;
-  left: 0;
   right: 0;
   height: 100%;
   transition: 1s ease-in-out;
-  top: 50px;
-  position: fixed;
+  top: 60px;
+  position: absolute;
   background: linear-gradient(90deg, #7250d5 0, transparent, #f43a67 100%);
 }
 // maake the overlay visible
@@ -85,7 +85,9 @@
 
 // change the nav link to mobile version
 .mobile__links {
-  width: 0%;
+  width:1%;
+  right: 0;
+  margin: auto;
   transition: 1s ease-in-out;
   background-color: white;
   z-index: 1;
@@ -102,11 +104,11 @@
   z-index: 1;
   text-align: center;
   top: 60px;
-  left: 0;
   transition: 1s ease-in-out;
-  margin: auto;
+
+  left: 0;
   border-radius: 10px;
-  right: 0;
+
   a {
     display: block;
     color: #000;
