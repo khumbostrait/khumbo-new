@@ -1,41 +1,41 @@
-.works {
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.work {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 10px;
   }
-  &__cols-2 {
-    text-align: center;
 
+  a {
+    flex-basis: 100%;
     @include breakpoints-up(medium) {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-    }
-
-    .work {
-      img {
-
-      
-        @include breakpoints-up(medium) {
-          transition: 300ms ease-in-out;
-          padding: 10px;
-          max-width: 100%;
-          background-color: white;
-          box-shadow: 0 0 5px black;
-          margin: 10px;
-          &:hover {
-            transform: translateY(-5px);
-        
-          }
-        }
-        background-color: white;
-        box-shadow: 0 0 5px black;
-        width: 98%;
-        position: relative;
-        margin-bottom: 20px;
+      flex: 1 0 50%;
+      transition: 300ms ease-in-out;
+      align-items: center;
+      padding-right: 15px;
+      &:hover {
+        transform: translateY(-10px);
       }
     }
+    @include breakpoints-up(large) {
+      flex: 1;
+    }
+  }
+  &__image {
+    height: 150px;
+    background-image: url(/app/images/python.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__tittle {
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__skills {
   }
 }
-
-

@@ -1,17 +1,14 @@
 .introl {
-  
   position: relative;
   bottom: 0.625rem;
-
   // change padding for large screens
   @include breakpoints-up(large) {
     padding-top: 0.625rem;
   }
   // main tittle of the page
   &__tittle {
-
-    @include breakpoints-down(medium){
-      &::before{
+    @include breakpoints-down(medium) {
+      &::before {
         position: absolute;
         width: 100%;
         height: 40px;
@@ -28,7 +25,7 @@
       border-bottom-right-radius: 6.25rem;
       border-bottom-left-radius: 6.25rem;
       padding: 1.25rem 0 9.8125rem;
-      &::before{
+      &::before {
         position: absolute;
         width: 100%;
         height: 5px;
@@ -37,7 +34,7 @@
         background-color: white;
         bottom: 0;
       }
-      &::after{
+      &::after {
         position: absolute;
         width: 100%;
         height: 5px;
@@ -48,7 +45,7 @@
       }
     }
 
-    // second lines 
+    // second lines
 
     // nomal flow
     text-align: center;
@@ -65,13 +62,33 @@
       #aa47a5 50%,
       #f43a67 99%
     );
- 
+    @include breakpoints-down(medium) {
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        content: "";
+        transform: rotate(80deg);
+        background-color: white;
+        bottom: 0;
+      }
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        content: "";
+        border-radius: 50px;
+        transform: rotate(-35deg);
+        background-color: white;
+        bottom: 0;
+      }
+    }
   }
 
   // intro image of the user
   &__image {
     position: relative;
-    
+
     // chabge the distance of padding for lager screens
     @include breakpoints-up(medium) {
       position: relative;
@@ -104,30 +121,6 @@
   }
 
   // hello and name message
-  &__description {
-
-
-    
-    text-align: center;
-    position: relative;
-    padding-bottom: 20px;
-    bottom: 60px;
-
-    // increase the font size for lager screens
-    @include breakpoints-up(medium) {
-      font-size: 30px;
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    .name {
-      font-size: 1.1rem;
-      @include breakpoints-up(medium) {
-        font-size: 30px;
-        font-weight: bold;
-      }
-    }
-  }
 }
 
 .accounts {
@@ -146,7 +139,7 @@
       background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
       &:hover {
         padding: 20px 3em;
-        border-radius:50px ;
+        border-radius: 50px;
       }
     }
   }

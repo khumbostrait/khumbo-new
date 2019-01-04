@@ -1,20 +1,7 @@
 .about {
-  background: linear-gradient(90deg, #7250d5 0,transparent,  #f43a67 100%);
-  margin-bottom: 3rem;
-  position: relative;
-  bottom: 4rem;
-  text-align: center;
-  background-color: white;
+  margin-bottom: 2rem;
   h2 {
     text-align: center;
-    position: relative;
-  }
-  .para {
-    color: black;
-    box-shadow: 0 0 5px transparent;
-    padding: 4px;
-    @include breakpoints-down(small) {
-      padding: 0 10px;
-    }
+    margin-bottom: 1rem;
   }
 }

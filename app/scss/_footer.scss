@@ -1,76 +1,65 @@
 .footer {
   z-index: 2;
-  @include breakpoints-up(large){
+  padding-top: 2rem;
+  @include breakpoints-up(large) {
     display: flex;
     padding-bottom: 5rem;
     justify-content: space-around;
-   position: relative;
-
+    position: relative;
   }
   background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
   text-align: center;
   color: white;
-  &__logo{
-
-    @include breakpoints-up(large){
+  &__logo {
+    @include breakpoints-up(large) {
       position: relative;
       top: 3rem;
-      
-   
     }
   }
 
-  &__links{
-    @include breakpoints-up(large){
+  &__links {
+    @include breakpoints-up(large) {
       position: relative;
       top: 3rem;
-      
-    
     }
 
-    .links{
+    .links {
       display: flex;
       flex-direction: column;
 
-      @include breakpoints-up(large){
+      @include breakpoints-up(large) {
         display: flex;
         flex-direction: row;
       }
-
     }
     margin-top: 1rem;
-    a{
+    a {
       display: block;
       text-decoration: none;
       color: white;
       font-weight: bold;
-        margin-bottom: 1rem;
-        margin-right: 10px;
-      
-    }
-  }
-
-  &__social{
-    @include breakpoints-up(large){
-
-      position: relative;
-      top: 3rem;
-      
-    
-    }
-  
-    margin-bottom: 10px;
-    img{
+      margin-bottom: 1rem;
       margin-right: 10px;
     }
   }
-  p{
-    @include breakpoints-up(large){
+
+  &__social {
+    @include breakpoints-up(large) {
       position: relative;
       top: 3rem;
-      
-    
     }
-    padding-bottom: 5px;
+
+    margin-bottom: 10px;
+    img {
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    padding-bottom: 1rem;
+    @include breakpoints-up(large) {
+      position: relative;
+      top: 3rem;
+    }
   }
 }

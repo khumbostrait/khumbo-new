@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #car {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="car">
+      <img src="/app/images/python.png" alt="car" />
+    </div>
+
+    <script>
+      const car = document.getElementById("car");
+
+      // Set the initial position of the car to the right edge of the screen
+      car.style.left = "100%";
+
+      // Move the car to the left at a rate of 10px per second
+      setInterval(() => {
+        let left = parseInt(car.style.left);
+        car.style.left = `${left - 10}px`;
+      }, 1000);
+    </script>
+  </body>
+</html>

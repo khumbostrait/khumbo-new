@@ -1,6 +1,5 @@
 .skills {
   margin-bottom: 3rem;
-
   h2 {
     text-align: center;
   }
@@ -12,8 +11,12 @@
     img {
       max-width: 100%;
       transition: 300ms ease-in-out;
+      box-shadow: 0 0 5 pxblack;
       background-color: white;
       box-shadow: 0 0 5px black;
+
+      padding: 20px;
+
       @include breakpoints-up(large) {
         padding: 5px 40px;
       }
