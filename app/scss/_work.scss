@@ -1,0 +1,24 @@
+.works {
+  .row {
+    @include breakpoints-up(large) {
+      display: flex;
+    }
+  }
+
+  img {
+    @include breakpoints-up(large) {
+      flex-basis: 20%;
+    }
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+    max-width: 100%;
+    background-color: white;
+
+    box-shadow: 0 0 5px black;
+    margin-bottom: 50px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

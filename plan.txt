@@ -1,0 +1,2 @@
+use boostrap for responsiveness 
+use scss for polishing up 

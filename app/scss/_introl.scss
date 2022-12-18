@@ -1,0 +1,84 @@
+.introl {
+  @include breakpoints-up(large) {
+    padding-top: 10px;
+  }
+  &__tittle {
+    color: white;
+
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    padding: 20px 0 157px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: -webkit-linear-gradient(
+      left,
+      #7250d5,
+      #aa47a5 50%,
+      #f43a67 99%
+    );
+
+    position: relative;
+    overflow: hidden;
+  }
+  &__image {
+    position: relative;
+    bottom: 157px;
+    opacity: 0.99;
+    text-align: center;
+
+    img {
+      @include breakpoints-up(small) {
+        width: 100%;
+        border: 3px solid white;
+      }
+      @include breakpoints-up(medium) {
+        width: 100%;
+      }
+      @include breakpoints-up(large) {
+        width: 90%;
+      }
+
+      max-width: 80%;
+      padding: 3px;
+      border: 2px solid white;
+      border-bottom: 2px solid #540ee0;
+    }
+  }
+  &__description {
+    text-align: center;
+    position: relative;
+    bottom: 157px;
+    .name {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.accounts {
+  position: fixed;
+  left: 0;
+  top: 60%;
+  .link {
+    margin-bottom: 45px;
+    a {
+      padding: 20px 10px;
+      font-weight: bold;
+      transition: 0.5s ease-in-out;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
+      &:hover {
+        padding: 20px 3em;
+        border: 2px solid blue;
+      }
+    }
+  }
+}
+
+// accordation
+.accordation {
+  background-color: #dddddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}

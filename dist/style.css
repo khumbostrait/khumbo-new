@@ -1,0 +1,384 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.button,
+button {
+  background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
+  padding: 10px 20px;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
+  color: white;
+  border-radius: 50px;
+}
+.button:hover,
+button:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+.flex.jc-sb {
+  justify-content: space-between;
+}
+.flex.jc-sa {
+  justify-content: space-around;
+}
+.flex.ai-c {
+  align-items: center;
+}
+
+@media (max-width: 60em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 60em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.nav__logo {
+  font-weight: bold;
+  color: rgb(84, 14, 224);
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav__links a {
+  font-size: 0.875rem;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+.nav__links a:not(:last-child) {
+  margin-right: 1.25rem;
+}
+.nav__links a::before {
+  position: absolute;
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 0.3125ren;
+  background-color: rgb(84, 14, 224);
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  content: "";
+  bottom: -1rem;
+}
+.nav__links a:hover::before {
+  opacity: 1;
+}
+.nav__menu {
+  cursor: pointer;
+}
+.nav__menu > span {
+  background-color: #000;
+  width: 1.25rem;
+  transform-origin: 3px 1px;
+  height: 0.125rem;
+  display: block;
+}
+.nav__menu > span:not(:last-child) {
+  margin-bottom: 0.1875rem;
+}
+.nav .open span:first-child {
+  transform: rotate(45deg);
+}
+.nav .open span:nth-child(2) {
+  visibility: hidden;
+}
+.nav .open span:last-child {
+  transform: rotate(-45deg);
+}
+
+.overla {
+  visibility: hidden;
+  width: 1%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: 1s ease-in-out;
+  top: 50px;
+  position: fixed;
+  background: linear-gradient(90deg, #7250d5 0, transparent, #f43a67 100%);
+}
+
+.show {
+  visibility: visible;
+  width: 100%;
+  transform: scale(1);
+}
+
+.mobile__links {
+  width: 0%;
+  transition: 1s ease-in-out;
+  background-color: white;
+  z-index: 1;
+}
+.mobile__links a {
+  display: none;
+  color: #000;
+}
+
+.visible {
+  width: 90%;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 60px;
+  left: 0;
+  transition: 1s ease-in-out;
+  margin: auto;
+  border-radius: 10px;
+  right: 0;
+}
+.visible a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: 1s;
+}
+.visible a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 60em) {
+  .introl {
+    padding-top: 10px;
+  }
+}
+.introl__tittle {
+  color: white;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  padding: 20px 0 157px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: -webkit-linear-gradient(left, #7250d5, #aa47a5 50%, #f43a67 99%);
+  position: relative;
+  overflow: hidden;
+}
+.introl__image {
+  position: relative;
+  bottom: 157px;
+  opacity: 0.99;
+  text-align: center;
+}
+.introl__image img {
+  max-width: 80%;
+  padding: 3px;
+  border: 2px solid white;
+  border-bottom: 2px solid #540ee0;
+}
+@media (min-width: 36em) {
+  .introl__image img {
+    width: 100%;
+    border: 3px solid white;
+  }
+}
+@media (min-width: 48em) {
+  .introl__image img {
+    width: 100%;
+  }
+}
+@media (min-width: 60em) {
+  .introl__image img {
+    width: 90%;
+  }
+}
+.introl__description {
+  text-align: center;
+  position: relative;
+  bottom: 157px;
+}
+.introl__description .name {
+  font-size: 1.1rem;
+}
+
+.accounts {
+  position: fixed;
+  left: 0;
+  top: 60%;
+}
+.accounts .link {
+  margin-bottom: 45px;
+}
+.accounts .link a {
+  padding: 20px 10px;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
+}
+.accounts .link a:hover {
+  padding: 20px 3em;
+  border: 2px solid blue;
+}
+
+.accordation {
+  background-color: #dddddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.about {
+  text-align: center;
+  background-color: white;
+}
+.about h2 {
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 36em) {
+  .about .para {
+    padding: 0 10px;
+  }
+}
+
+.main {
+  position: relative;
+  bottom: 150px;
+}
+
+.skills h2 {
+  text-align: center;
+}
+.skills .skill {
+  text-align: center;
+}
+.skills .skill img {
+  max-width: 100%;
+  padding: 3px 10px;
+  background-color: white;
+  box-shadow: 0 0 5px black;
+}
+@media (min-width: 60em) {
+  .skills .skill img {
+    padding: 5px 40px;
+  }
+}
+
+@media (min-width: 60em) {
+  .works .row {
+    display: flex;
+  }
+}
+.works img {
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 0 5px black;
+  margin-bottom: 50px;
+}
+@media (min-width: 60em) {
+  .works img {
+    flex-basis: 20%;
+  }
+}
+.works img:hover {
+  transform: scale(1.1);
+}
+
+.sliding {
+  text-align: center;
+  /* Slideshow container */
+  /* Caption text */
+  /* Number text (1/3 etc) */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */
+}
+.sliding .mySlides {
+  display: none;
+}
+.sliding img {
+  vertical-align: middle;
+}
+.sliding .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.sliding .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.sliding .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.sliding .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.sliding .active {
+  background-color: #717171;
+}
+.sliding .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .sliding .text {
+    font-size: 11px;
+  }
+}/*# sourceMappingURL=style.css.map */

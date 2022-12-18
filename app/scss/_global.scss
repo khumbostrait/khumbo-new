@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+// all elements
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// all body elements
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+
+// lock body on menu open
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// button universal styles
+.button,
+button {
+  background: linear-gradient(90deg, #7250d5 0, #f43a67 100%);
+  padding: 10px 20px;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: 200ms ease-in-out;
+  color: white;
+  border-radius: 50px;
+
+  &:hover {
+    opacity: 0.7;
+    color: white;
+  }
+}
+
+// flex elements
+.flex {
+  display: flex;
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.jc-sa {
+    justify-content: space-around;
+  }
+  &.ai-c {
+    align-items: center;
+  }
+}
+
+// hide fpr desktop
+.hide-for-mobile {
+  @include breakpoints-down(large) {
+    display: none;
+  }
+}
+
+// hide for mobile
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
