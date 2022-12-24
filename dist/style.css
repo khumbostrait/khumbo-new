@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: var(#7250d5);
   font-size: 100%;
 }
 
@@ -308,6 +308,8 @@ button:hover {
 
 .about {
   margin-bottom: 3rem;
+  position: relative;
+  bottom: 3rem;
   text-align: center;
   background-color: white;
 }
@@ -371,6 +373,7 @@ button:hover {
   background-color: white;
   box-shadow: 0 0 5px black;
   width: 98%;
+  position: relative;
   margin-bottom: 20px;
 }
 @media (min-width: 48em) {
