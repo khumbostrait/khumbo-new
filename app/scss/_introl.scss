@@ -7,18 +7,18 @@
   }
   // main tittle of the page
   &__tittle {
-    @include breakpoints-down(medium) {
-      &::before {
-        position: absolute;
-        width: 100%;
-        height: 40px;
-        border-radius: 100%;
-        content: "";
-        transform: rotate(-10deg);
-        background-color: white;
-        bottom: 0;
-      }
-    }
+    // @include breakpoints-down(medium) {
+    //   &::before {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 40px;
+    //     border-radius: 100%;
+    //     content: "";
+    //     transform: rotate(-10deg);
+    //     background-color: white;
+    //     bottom: 0;
+    //   }
+    // }
 
     @include breakpoints-up(medium) {
       // increase the border radius for lager screen
@@ -69,16 +69,6 @@
         height: 5px;
         content: "";
         transform: rotate(80deg);
-        background-color: white;
-        bottom: 0;
-      }
-      &::after {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        content: "";
-        border-radius: 50px;
-        transform: rotate(-35deg);
         background-color: white;
         bottom: 0;
       }
