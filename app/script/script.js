@@ -69,8 +69,3 @@ wordMarquee.style.width = wordMarquee.scrollWidth + 'px';
 
 
 
-// automatic load elements 
-
-const active = document.querySelectorAll(".disable");
-
-for()
