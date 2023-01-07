@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: var(#7250d5);
-
+  scroll-behavior: smooth;
   font-size: 100%;
 }
 
@@ -62,6 +61,13 @@ body {
   }
   &.ai-c {
     align-items: center;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.glow {
+    flex-grow: 1;
+    flex-shrink: 0;
   }
 }
 

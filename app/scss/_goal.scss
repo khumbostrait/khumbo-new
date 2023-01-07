@@ -1,0 +1,31 @@
+.goal {
+  background-color: white;
+  box-shadow: 0 0 5px black;
+  border-top-left-radius: 30px;
+  margin-bottom: 3rem;
+  &__column1 {
+    h2 {
+      margin: 10px;
+      cursor: pointer;
+      padding: 10px 20px;
+      transition: 0.5s ease-in-out;
+      background-color: #d6d6d6;
+      box-shadow: 0 0 5px black;
+      &:hover {
+        background-color: blue;
+      }
+    }
+  }
+  .column2 {
+    #two,
+    #three {
+      opacity: 0;
+    }
+  }
+}
+.disable {
+  opacity: 0;
+}
+.active {
+  opacity: 1;
+}
